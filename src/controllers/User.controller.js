@@ -19,7 +19,7 @@ exports.obtener= async (req, res) => {
 };
 
 // get a user
-exports.obteberId= async (req, res) => {
+exports.obtenerId= async (req, res) => {
   const { id } = req.params;
   userSchema
     .findById(id)
@@ -29,4 +29,3 @@ exports.obteberId= async (req, res) => {
 
 
 
-module.exports = userRouter;

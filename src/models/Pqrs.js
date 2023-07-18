@@ -1,10 +1,10 @@
+const {Schema,model}=require("mongoose");
 
-const mongoose = require("mongoose");
 
-const pqrsSchema = mongoose.Schema({
+const pqrsSchema = new Schema({
     "user": {
-        type: String,
-        //ref: "users"
+      type: Schema.Types.ObjectId,
+      ref: "User"
     },
     "type": {
         type: String,
@@ -15,7 +15,7 @@ const pqrsSchema = mongoose.Schema({
     required: true
   },
     "date": {
-    type: String,
+    type: Date,
     required: true
   },
   "area": {
@@ -32,4 +32,4 @@ const pqrsSchema = mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Pqrs', pqrsSchema);
+module.exports = model('Pqrs', pqrsSchema);

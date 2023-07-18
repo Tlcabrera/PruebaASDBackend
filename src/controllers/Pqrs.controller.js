@@ -1,33 +1,31 @@
 
 const pqrsSchema = require("../models/Pqrs");
-
-const pqrsRouter = express.Router();
 //router.get("/pqrs", Authetication, checkRoleAuth(['admin']), getAllPqrs);
-// register pqrs
-pqrsRouter.post("/pqrs", (req, res) => {
+// route register pqrs
+exports.create= async (req, res) => {
   const pqrs = pqrsSchema(req.body);
   pqrs
     .save()
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
-});
+};
 
-// get all pqrs
-pqrsRouter.get("/pqrs", (req, res) => {
+// route get all pqrs
+exports.obtener= async(req, res) => {
   pqrsSchema
     .find()
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
-});
+    .then((data) => res.status(200).json(data))
+    .catch((error) => res.status(500).json({ message: error }));
+};
 
-// get a pqrs by Id
-pqrsRouter.get("/pqrs/:id", (req, res) => {
+// route get a pqrs by Id
+exports.obtenerId= async(req, res) => {
   const { id } = req.params;
   pqrsSchema
     .findById(id)
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
-});
+};
 
 // delete a pqrs
 /*pqrsRouter.delete("/pqrs/:id", (req, res) => {
@@ -39,7 +37,7 @@ pqrsRouter.get("/pqrs/:id", (req, res) => {
 });*/
 
 // update a pqrs
-pqrsRouter.put("/pqrs/:id", (req, res) => {
+exports.update= async(req, res) => {
   const { id } = req.params;
    
    const { user, type, description, date, area, civilservant, state } = req.body;
@@ -47,9 +45,9 @@ pqrsRouter.put("/pqrs/:id", (req, res) => {
     .updateOne({ _id: id }, { $set: { user, type, description, date, area, civilservant, state } })
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
-});
+};
 // update state but pqrs
-pqrsRouter.put("/edit/:id", (req, res) => {
+exports.edit= async (req, res) => {
   const { id } = req.params;
    
    const { state } = req.body;
@@ -57,5 +55,4 @@ pqrsRouter.put("/edit/:id", (req, res) => {
     .updateOne({ _id: id }, { $set: { state } })
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
-});
-module.exports = pqrsRouter;
+};
