@@ -1,9 +1,9 @@
-const { ObjectId } = require("mongodb/mongodb");
+
 const mongoose = require("mongoose");
 
-const userSchema = mongoose.Schema({
+const pqrsSchema = mongoose.Schema({
     "user": {
-        type: Schema.Types.ObjectId,
+        type: String,
         ref: "users"
     },
     "type": {
@@ -32,4 +32,4 @@ const userSchema = mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Pqrs', pqrsSchema);

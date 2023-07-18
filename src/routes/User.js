@@ -1,10 +1,10 @@
 const express = require("express");
 const userSchema = require("../models/User");
 
-const router = express.Router();
+const userRouter = express.Router();
 
 // create-register user
-router.post("/users", (req, res) => {
+userRouter.post("/users", (req, res) => {
   const user = userSchema(req.body);
   //res.send("Create User");
   user
@@ -14,7 +14,7 @@ router.post("/users", (req, res) => {
 });
 
 // get all users
-router.get("/users", (req, res) => {
+userRouter.get("/users", (req, res) => {
   userSchema
     .find()
     .then((data) => res.json(data))
@@ -22,7 +22,7 @@ router.get("/users", (req, res) => {
 });
 
 // get a user
-router.get("/users/:id", (req, res) => {
+userRouter.get("/users/:id", (req, res) => {
   const { id } = req.params;
   userSchema
     .findById(id)
@@ -32,4 +32,4 @@ router.get("/users/:id", (req, res) => {
 
 
 
-module.exports = router;
+module.exports = userRouter;

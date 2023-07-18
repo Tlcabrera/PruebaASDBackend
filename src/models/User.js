@@ -1,8 +1,9 @@
-const { ObjectId } = require("mongodb/mongodb");
+
 const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema({
-    firstName: {
+  
+   firstName: {
     type: String,
     required: true
   },

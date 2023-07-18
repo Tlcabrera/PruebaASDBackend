@@ -1,9 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
-require('dotenv').config()
-const userRoute=require ("./src/routes/User.js")
-const pqrsRoute=
+require('dotenv').config();
+const userRoute=require ("./src/routes/User");
+const pqrsRoute= require ("./src/routes/Pqrs");
 // settings
 const app = express();
 const port = process.env.PORT || 9000;
@@ -11,6 +11,7 @@ const port = process.env.PORT || 9000;
 // middlewares
 app.use(express.json());
 app.use("/api", userRoute);
+app.use("/pqrs", pqrsRoute);
 
 // routes
 app.get("/", (req, res) => {
