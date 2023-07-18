@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const pqrsSchema = mongoose.Schema({
     "user": {
         type: String,
-        ref: "users"
+        //ref: "users"
     },
     "type": {
         type: String,
