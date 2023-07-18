@@ -1,17 +1,14 @@
+const { ObjectId } = require("mongodb/mongodb");
 const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema({
-  id: {
+    firstName: {
     type: String,
-    required: true,
-  },
-  fistName: {
-    type: String,
-    required: true,
+    required: true
   },
   lastName: {
     type: String,
-    required: true,
+    required: true
   },
     email: {
     type: String,
@@ -23,7 +20,6 @@ const userSchema = mongoose.Schema({
   },
   rol: {
     type: String,
-    default: "user",
     required: true
   }
 });
