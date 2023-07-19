@@ -35,23 +35,23 @@ exports.obtenerDate= async(req, res) => {
     .then((data) => res.status(200).json(data))
     .catch((error) => res.status(500).json({ message: error }));
 };
-// function by get a pqrs by type
+/*// function by get a pqrs by type
 exports.obtenerType= async(req, res) => {
   const { type } = req.params.type;
   pqrsSchema
     .find({type:{$ne:type}})
     .then((data) => res.status(200).json(data))
     .catch((error) => res.status(500).json({ message: error }));
-};
+};*/
 
-// function by get a pqrs by area
+/*// function by get a pqrs by area
 exports.obtenerArea= async(req, res) => {
   const { area } = req.params;
   pqrsSchema
     .findById(area)
     .then((data) => res.status(200).json(data))
     .catch((error) => res.status(500).json({ message: error }));
-};
+};*/
 
 // function by delete a pqrs
 /* exports.odelete= async(req, res) => {
