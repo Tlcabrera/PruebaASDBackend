@@ -1,16 +1,16 @@
 
 const pqrsSchema = require("../models/Pqrs");
-//router.get("/pqrs", Authetication, checkRoleAuth(['admin']), getAllPqrs);
-// route register pqrs
+
+// function by register pqrs
 exports.create= async (req, res) => {
   const pqrs = pqrsSchema(req.body);
   pqrs
     .save()
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
+    .then((data) => res.status(200).json(data))
+    .catch((error) => res.status(500).json({ message: error }));
 };
 
-// route get all pqrs
+// function by get all pqrs
 exports.obtener= async(req, res) => {
   pqrsSchema
     .find()
@@ -18,17 +18,43 @@ exports.obtener= async(req, res) => {
     .catch((error) => res.status(500).json({ message: error }));
 };
 
-// route get a pqrs by Id
+// function by get a pqrs by Id
 exports.obtenerId= async(req, res) => {
   const { id } = req.params;
   pqrsSchema
     .findById(id)
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
+    .then((data) => res.status(200).json(data))
+    .catch((error) => res.status(500).json({ message: error }));
 };
 
-// delete a pqrs
-/*pqrsRouter.delete("/pqrs/:id", (req, res) => {
+// function by get a pqrs by Date
+exports.obtenerDate= async(req, res) => {
+  const { date } = req.params;
+  pqrsSchema
+    .find(date)
+    .then((data) => res.status(200).json(data))
+    .catch((error) => res.status(500).json({ message: error }));
+};
+// function by get a pqrs by type
+exports.obtenerType= async(req, res) => {
+  const { type } = req.params.type;
+  pqrsSchema
+    .find({type:{$ne:type}})
+    .then((data) => res.status(200).json(data))
+    .catch((error) => res.status(500).json({ message: error }));
+};
+
+// function by get a pqrs by area
+exports.obtenerArea= async(req, res) => {
+  const { area } = req.params;
+  pqrsSchema
+    .findById(area)
+    .then((data) => res.status(200).json(data))
+    .catch((error) => res.status(500).json({ message: error }));
+};
+
+// function by delete a pqrs
+/* exports.odelete= async(req, res) => {
   const { id } = req.params;
   pqrsSchema
     .remove({ _id: id })
@@ -36,23 +62,23 @@ exports.obtenerId= async(req, res) => {
     .catch((error) => res.json({ message: error }));
 });*/
 
-// update a pqrs
+// function  by update all  propierties to pqrs
 exports.update= async(req, res) => {
   const { id } = req.params;
    
    const { user, type, description, date, area, civilservant, state } = req.body;
   pqrsSchema
     .updateOne({ _id: id }, { $set: { user, type, description, date, area, civilservant, state } })
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
+    .then((data) => res.status(200).json(data))
+    .catch((error) => res.status(500).json({ message: error }));
 };
-// update state but pqrs
+// function by update state but pqrs
 exports.edit= async (req, res) => {
   const { id } = req.params;
    
    const { state } = req.body;
   pqrsSchema
     .updateOne({ _id: id }, { $set: { state } })
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
+    .then((data) => res.status(200).json(data))
+    .catch((error) => res.status(500).json({ message: error }));
 };

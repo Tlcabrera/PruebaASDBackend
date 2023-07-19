@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>API PQRS</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>API PQRS</h1>
+            <h2>ROUTES</h2>
+            <p><strong>Principal</strong><a href="/"> https://hoteliakuepa.herokuapp.com</a></p>
+            <h2>Users</h2>
+            <p><strong>GET </strong><a href="/api/users"> http://localhost:9000/api/users</a></p>
+            <p><strong>GET </strong><a href="/api/users/64b6e765a588e00cdbc8717d"> http://localhost:9000/api/users/id</a><br>
+                <SMall>Esta ruta obtiene una habitación a partir de su <strong>id</strong></SMall></P>
+                <p><strong>POST </strong><a href="/api/users"> http://localhost:9000/api/users </a></p>
+            
+
+            <h2>PQRS</h2>
+            <p><strong>GET </strong><a href="/pqrs/pqrs"> http://localhost:9000/pqrs/pqrs</a></p>
+            <p><strong>GET </strong><a href="/pqrs/pqrs/64b6e765a588e00cdbc8717d"> http://localhost:9000/pqrs/pqrs/id</a><br>
+                <SMall>Esta ruta obtiene una PQRS a partir de su <strong>id</strong></SMall></P>
+            <p><strong>GET </strong><a href="/pqrs/64b6e765a588e00cdbc8717d"> http://localhost:9000/api/users/id</a><br>
+                <SMall>Esta ruta obtiene una PQRS a partir de su <strong>fecha</strong></SMall></P>
+            <p><strong>GET </strong><a href="/pqrs/64b6e765a588e00cdbc8717d"> http://localhost:9000/api/users/id</a><br>
+                <SMall>Esta ruta obtiene una PQRS a partir de su <strong>tipo</strong></SMall></P>
+            <p><strong>GET </strong><a href="/pqrs/64b6e765a588e00cdbc8717d"> http://localhost:9000/api/users/id</a><br>
+                <SMall>Esta ruta obtiene una PQRS a partir de su <strong>área</strong></SMall></P>    
+            <p><strong>POST </strong><a href="/pqrs/pqrs"> http://localhost:9000/pqrs/pqrs </a></p>
+            <p><strong>PUT  </strong><a href="/pqrs/pqrs/64b70b639ada743e7b6e6b3c">http://localhost:9000/pqrs/pqrs/id</a><br>   
+                <SMall>Esta ruta permite modificar cualquier dato de una PQRS a partir de su <strong>id</strong></SMall></P>
+            <p><strong>PUT  </strong><a href="/pqrs/edit/64b70b639ada743e7b6e6b3c">http://localhost:9000/pqrs/edit/id</a><br>   
+                <SMall>Esta ruta permite modificar el estado de una PQRS a partir de su <strong>id</strong></SMall></P>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+

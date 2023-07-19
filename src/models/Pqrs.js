@@ -14,16 +14,17 @@ const pqrsSchema = new Schema({
     type: String,
     required: true
   },
+  //aaaa/mm/dd
     "date": {
     type: Date,
     required: true
   },
   "area": {
-    type: String,
+    type: Array,
     required: true
   },
   "civilservant": {
-    type: String,
+    type: Array,
     required: true
   },
   "state": {
