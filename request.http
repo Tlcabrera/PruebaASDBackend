@@ -10,11 +10,11 @@ POST http://localhost:9000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-"firstName": "Luisa",
-"lastName": "Cortes",
-"email": "lucgmail.com",
-"password": "75621li",
-"rol": "admin"
+"firstName": "Maria",
+"lastName": "Vargas",
+"email": "mvgmail.com",
+"password": "1258po",
+"rol": "cliente"
 }
 ###
 GET http://localhost:9000/pqrs/pqrs HTTP/1.1
