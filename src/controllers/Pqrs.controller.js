@@ -31,27 +31,29 @@ exports.obtenerId= async(req, res) => {
 exports.obtenerDate= async(req, res) => {
   const { date } = req.params;
   pqrsSchema
-    .find(date)
+    .findOne(date)
     .then((data) => res.status(200).json(data))
     .catch((error) => res.status(500).json({ message: error }));
 };
-/*// function by get a pqrs by type
+// function by get a pqrs by type
 exports.obtenerType= async(req, res) => {
   const { type } = req.params.type;
   pqrsSchema
     .find({type:{$ne:type}})
     .then((data) => res.status(200).json(data))
     .catch((error) => res.status(500).json({ message: error }));
-};*/
+};
 
-/*// function by get a pqrs by area
+// function by get a pqrs by area
 exports.obtenerArea= async(req, res) => {
   const { area } = req.params;
+
+  //const viajes = await area.find().toArray();
   pqrsSchema
-    .findById(area)
+    .find(area)
     .then((data) => res.status(200).json(data))
     .catch((error) => res.status(500).json({ message: error }));
-};*/
+};
 
 // function by delete a pqrs
 /* exports.odelete= async(req, res) => {

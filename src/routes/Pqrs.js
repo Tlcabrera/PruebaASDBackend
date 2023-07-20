@@ -13,12 +13,12 @@ pqrsRouter.get("/pqrs", pqrsCtr.obtener);
 pqrsRouter.get("/pqrs/:id", pqrsCtr.obtenerId);
 
 // Route get a pqrs by date
-//pqrsRouter.get("/date/:date", pqrsCtr.obtenerDate);
+pqrsRouter.get("/read/:date", pqrsCtr.obtenerDate);
 
 // Route get a pqrs by type
-//pqrsRouter.get("/type/:type", pqrsCtr.obtenerType);
+pqrsRouter.get("/readt/:type", pqrsCtr.obtenerType);
 // Route get a pqrs by area
-//pqrsRouter.get("/area/:area", pqrsCtr.obtenerArea);
+pqrsRouter.get("/area/:area", pqrsCtr.obtenerArea);
 // route delete a pqrs
 /*pqrsRouter.delete("/pqrs/:id", pqrsCtr.delete); */
 

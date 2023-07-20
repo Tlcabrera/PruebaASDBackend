@@ -1,4 +1,4 @@
-/*const User=require("../models/User");
+const User=require("../models/User");
 const jwt=require("jsonwebtoken");
 
 const autorizedUser=async(req,res,next)=>{
@@ -18,4 +18,4 @@ const autorizedUser=async(req,res,next)=>{
     next();
 }
 
-module.exports=autorizedUser;*/
+module.exports=autorizedUser;
