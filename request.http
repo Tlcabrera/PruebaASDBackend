@@ -10,9 +10,9 @@ POST http://localhost:9000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-"firstName": "Maria",
-"lastName": "Vargas",
-"email": "mvgmail.com",
+"firstName": "Sandra",
+"lastName": "Rodriguez",
+"email": "sr@mail.com",
 "password": "1258po",
 "rol": "cliente"
 }
@@ -23,20 +23,20 @@ POST http://localhost:9000/pqrs/pqrs HTTP/1.1
 Content-Type: application/json
 
 {
-"user": "64b71d90f5058019a5e316ca",
-"type": "peticion",
-"description": "Solicitud cancelación cuenta",
+"user": "64bb1457954c97bbfaecaf02",
+"type": "queja",
+"description": "mala atención",
 "date": "2023/07/19",
 "area": "Atención al cliente",
 "civilservant":["David", "Gabriel"],
-"state":"radicada"
+"state":"Activa"
 }
 
 ###
 DELETE http://localhost:9000/pqrs/pqrs/64b6e916a588e00cdbc87188 HTTP/1.1
 
 ###
-PUT http://localhost:9000/pqrs/edit/64b71c66f5058019a5e316c6 HTTP/1.1
+PUT http://localhost:9000/pqrs/edit/64bb14c1954c97bbfaecaf05 HTTP/1.1
 Content-Type: application/json
 
 {
