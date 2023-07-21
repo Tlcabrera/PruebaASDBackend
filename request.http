@@ -40,7 +40,7 @@ PUT http://localhost:9000/pqrs/edit/64bb14c1954c97bbfaecaf05 HTTP/1.1
 Content-Type: application/json
 
 {
-"state":"cancelada"
+"state":"tramitadas"
 }
 ###
 PUT  http://localhost:9000/pqrs/pqrs/64b70b639ada743e7b6e6b3c HTTP/1.1
@@ -50,7 +50,7 @@ Content-Type: application/json
 "user": "64b6e7a2a588e00cdbc87180",
 "type": "queja",
 "description": "Mala facturación",
-"date": "19/07/2023",
+"date": "2023/11/12",
 "area": "cliente",
 "civilservant":"Paula",
 "state":"activa"
