@@ -11,12 +11,12 @@ exports.create= async (req, res) => {
     .catch((error) => res.status(500).json({ message: "Faltan datos por diligenciar"+error}));
 };
 
-const isEmailExist = await User.findOne({ email: req.body.email });
+/*const isEmailExist = await User.findOne({ email: req.body.email });
 if (isEmailExist) {
     return res.status(400).json(
         {error: 'Email ya registrado'}
     )
-}
+}*/
 // function by get all users
 exports.obtener= async (req, res) => {
   userSchema

@@ -36,11 +36,11 @@ Content-Type: application/json
 DELETE http://localhost:9000/pqrs/pqrs/64b6e916a588e00cdbc87188 HTTP/1.1
 
 ###
-PUT http://localhost:9000/pqrs/edit/64b75dc7ac544e896eb3cdd4 HTTP/1.1
+PUT http://localhost:9000/pqrs/edit/64b71c66f5058019a5e316c6 HTTP/1.1
 Content-Type: application/json
 
 {
-"state":"en tramite"
+"state":"cancelada"
 }
 ###
 PUT  http://localhost:9000/pqrs/pqrs/64b70b639ada743e7b6e6b3c HTTP/1.1
@@ -51,7 +51,7 @@ Content-Type: application/json
 "type": "queja",
 "description": "Mala facturación",
 "date": "19/07/2023",
-"area": "Facturación",
+"area": "cliente",
 "civilservant":"Paula",
 "state":"activa"
 }
