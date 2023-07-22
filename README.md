@@ -10,7 +10,7 @@ Este documento contiene:
 •	Pruebas de procesos con Postman
 
 1.	MODELAMIENTO BACKEND (DIAGRAMA DE CLASES)
-
+![Image text](https://github.com/Tlcabrera/PruebaASDBackend/blob/main/public/PQRS.png)
  
 
 
